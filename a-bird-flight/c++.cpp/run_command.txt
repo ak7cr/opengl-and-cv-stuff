@@ -1,0 +1,4 @@
+g++ -std=c++17 main.cpp \
+  -I$(brew --prefix opencv)/include/opencv4 \
+  -L$(brew --prefix opencv)/lib \
+  -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
