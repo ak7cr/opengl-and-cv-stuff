@@ -1,0 +1,20 @@
+# For Compilation
+
+g++ -std=c++17 main.cpp \
+  -I$(brew --prefix opencv)/include/opencv4 \
+  -I$(brew --prefix glew)/include \
+  -I$(brew --prefix glfw)/include \
+  -L$(brew --prefix opencv)/lib \
+  -L$(brew --prefix glew)/lib \
+  -L$(brew --prefix glfw)/lib \
+  -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui -lopencv_videoio \
+  -lGLEW -lglfw \
+  -framework OpenGL \
+  -framework Cocoa \
+  -framework IOKit \
+  -framework CoreVideo \
+  -framework CoreFoundation \
+  -o graycam
+
+# To Execute the program
+./graycam
