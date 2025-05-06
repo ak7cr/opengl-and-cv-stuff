@@ -1,0 +1,8 @@
+g++ -std=c++17 main.cpp src/glad.c \
+  -Iinclude \
+  -I$(brew --prefix glfw)/include \
+  -L$(brew --prefix glfw)/lib \
+  -lglfw \
+  -framework OpenGL
+
+./a.out
